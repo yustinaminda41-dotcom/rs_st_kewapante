@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>RS St. Gabriel Kewapante</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+    }
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 70, 150, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .hero-overlay h1 {
+      font-size: 2.5rem;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    a.card {
+      text-decoration: none;
+      color: inherit;
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      transition: 0.3s;
+    }
+
+    a.card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.15);
+      background: #f0f6ff;
+    }
+
+    .card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #2b7cff;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background: #2b7cff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <video autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <div>
+      <h1>Sistem Penerimaan Pasien</h1>
+      <p>RS St. Gabriel Kewapante Maumere</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu">
+
+  <a href="pendaftaran.html" class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+    <h3>Pendaftaran Pasien</h3>
+    <p>Input data pasien & keluhan awal</p>
+  </a>
+
+  <a href="triase.html" class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
+    <h3>Triase IGD</h3>
+    <p>Penilaian kondisi darurat</p>
+  </a>
+
+  <a href="dokter.html" class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png">
+    <h3>Pemeriksaan Dokter</h3>
+    <p>Diagnosa & keputusan layanan</p>
+  </a>
+
+  <a href="pembayaran.html" class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
+    <h3>Pembayaran</h3>
+    <p>BPJS atau Umum</p>
+  </a>
+
+  <a href="rawatinap.html" class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+    <h3>Rawat Inap</h3>
+    <p>Manajemen kamar pasien</p>
+  </a>
+
+</section>
+
+<footer>
+  © 2026 RS St. Gabriel Kewapante Maumere
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
